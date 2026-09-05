@@ -11,7 +11,7 @@ This topic lists the most common MIME types with corresponding document types, o
 The following two important MIME types are the default types:
 
 - `text/plain` is the default value for textual files. A textual file should be human-readable and must not contain binary data.
-- `application/octet-stream` is the default value for all other cases. An unknown file type should use this type. Browsers are particularly careful when manipulating these files to protect users from software vulnerabilities and possible dangerous behavior.
+- `application/octet-stream` is the default value for all other cases. An unknown file type should use this type. Browsers are particularly careful when manipulating these files, to protect users from software vulnerabilities and possible dangerous behavior: because the content is not a recognized type, the browser does not render or execute it inline, but instead treats it as an opaque download — usually prompting the user to save the file, especially when a [`Content-Disposition: attachment`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Disposition) header is present. To stop a browser from second-guessing this type and "sniffing" a more specific (and potentially executable) one from the content, send the [`X-Content-Type-Options: nosniff`](/en-US/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options) header.
 
 IANA is the official registry of MIME media types and maintains a [list of all the official MIME types](https://www.iana.org/assignments/media-types/media-types.xhtml). This table lists important MIME types for the Web:
 
