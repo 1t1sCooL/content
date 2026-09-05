@@ -168,6 +168,9 @@ The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a diff
 
 However, you are unlikely to use these elements very much. If you need to display PDFs, it's usually better to link to them, rather than embedding them in the page.
 
+> [!NOTE]
+> If you do need to embed a PDF rather than link to it, prefer an {{htmlelement("iframe")}} over `<embed>` or `<object>`. An `<iframe>` can be locked down with the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute and restricted with the [`frame-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-src) CSP directive, whereas `<embed>` and `<object>` can't be sandboxed. Modern browsers render a PDF natively in an `<iframe>` without needing a plugin.
+
 Historically these elements have also been used for embedding content handled by browser {{Glossary("Plugin", "plugins")}} such as {{Glossary("Adobe Flash")}}, but this technology is now obsolete and is not supported by modern browsers.
 
 If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
