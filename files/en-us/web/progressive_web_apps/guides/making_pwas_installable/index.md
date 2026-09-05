@@ -116,7 +116,7 @@ On desktop:
 
 On mobile:
 
-- On Android, Firefox, Chrome, Edge, Opera, and Samsung Internet Browser all support installing PWAs.
+- On Android, the Chromium-based browsers — Chrome, Edge, Opera, and Samsung Internet Browser — install PWAs as WebAPKs, so they appear in the app drawer and app switcher and behave like platform-specific apps. Firefox for Android instead only adds a home screen shortcut that opens the site in the browser, rather than installing it as a separate app.
 - On iOS 16.3 and earlier, PWAs can only be installed with Safari.
 - On iOS 16.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
 
