@@ -50,6 +50,9 @@ An element is clickable if it has an `onclick` event handler defined. You can ma
 
 If the user can interact with an element using touch or a pointing device, then the element should also support interacting using the keyboard. That is, if you have defined event handlers for touch or click events, you should also define them for keyboard events. The keyboard event handlers should enable effectively the same interaction as the touch or click handlers.
 
+> [!NOTE]
+> Some assistive technologies — the NVDA screen reader, for example — intercept <kbd>Enter</kbd> and <kbd>Space</kbd> and dispatch a `click` event instead of `keydown`/`keyup`. A custom control that only listens for keyboard events can therefore appear unresponsive while a screen reader is running. Where possible, use a native interactive element such as {{HTMLElement("button")}} or {{HTMLElement("a")}}, which handles keyboard activation for you; otherwise make sure your control also responds to `click`, not just `keydown`/`keyup`.
+
 ### See also
 
 - Element: [keydown event](/en-US/docs/Web/API/Element/keydown_event)
